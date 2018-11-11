@@ -1,3 +1,16 @@
-<p>
-  home works!
-</p>
+<h1 [class.gray]="h1Style">Home</h1>
+
+<h2 [ngClass]="{
+  'gray': h1Style,
+  'large': !h1Style
+}">Subtitle</h2>
+
+<h3 [style.color]="h1Style ? 'gray' : 'orange'">Another subtitle</h3>
+
+<h4 [ngStyle]="{
+  'color': h1Style ? 'gray' : 'orange',
+  'font-size': h1Style ? '1em' : '4em'
+
+}">last subtitle I guess</h4>
+
+<button (click)="firstClick()">Click me</button>
